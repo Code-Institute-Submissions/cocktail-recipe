@@ -6,13 +6,16 @@
     </head>
     <body>
         <h1>Cocktails</h1>
-        {% block content %}
-        {% endblock %}
+        {% block content %} {% endblock %}
     <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
             $('.collapsible.popout').collapsible();
+            $('select').material_select();
+            $('#textarea1').val('New Text');
+            M.textareaAutoResize($('#textarea1'));
+            $('input#input_text, textarea#textarea2').characterCounter();
         });
       </script>
     </body>
