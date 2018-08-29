@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-    </head>
-    <body>
-        <a href="{{url_for('add_recipe')}}"  class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Create Cocktail</a>
-        {% block content %} {% endblock %}
-    <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Cocktails</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Create Cocktail</a>
+    <div class="parallax-container">
+        <div class="parallax"><img src="images/glasses-1477081_1920.jpgjpg"></div>
+    </div>
+    {% block content %} {% endblock %}
+    <div class="parallax-container">
+        <div class="parallax"><img src="images/cocktails-948353_1920.jpg"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function(){
+    <script type="text/javascript">
+        $(document).ready(function() {
             $('.collapsible.popout').collapsible();
+            $('.parallax').parallax();
             $('select').material_select();
             $('#textarea1').val('New Text');
             M.textareaAutoResize($('#textarea1'));
             $('input#input_text, textarea#textarea2').characterCounter();
+            $('.sidenav').sidenav();
         });
-      </script>
-    </body>
+    </script>
+</body>
+
 </html>

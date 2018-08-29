@@ -1,23 +1,23 @@
 {% extends 'base.html' %} {% block content %} 
-<div class="row">
+<div class="row section white" >
     <ul class="collapsible popout">
         {% for recipe in recipes %}
         <li>
             <div class="collapsible-header">
                 <div class="col s9">
                     <i class="material-icons">local_drink</i>
-                    <strong>{{recipe.recipe_name}}</strong>{{recipe.cocktail_author}}
+                    <strong>{{recipe.cocktail_name}} </strong>  
                 </div>
                 <div class="col s3">
                     <a class="waves-effect waves-light btn btn_small blue"><i class="material-icons left">pageview</i>View</a>
-                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red"><i class="material-icons left">edit_attributes</i>Edit</a>
+                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small"><i class="material-icons left">edit_attributes</i>Edit</a>
+                    <a href="{{url_for('delete_recipes', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red"><i class="material-icons left">delete_forever</i>Delete</a>
                 </div>
             </div>
             <div class="collapsible-body"><span>{{recipe.cocktail_details}} </span></div>
-            <div class="collapsible-body"><span>{{recipe.diffculty_level}}</span></div>
+            <div class="collapsible-body"><span>{{recipe.diffculty_level}} Author <strong>{{recipe.cocktail_author}}</strong></span></div>
         </li>
         {% endfor %}
-        
     </ul>
 </div>
 {% endblock %}
