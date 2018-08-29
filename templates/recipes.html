@@ -1,23 +1,25 @@
-{% extends 'base.html' %} {% block content %}
-<h3>Our cocktails</h3>
-
+{% extends 'base.html' %} {% block content %} {% for recipe in recipes %}
 <h3>Your Cocktail List</h3>
-{% for recipe in recipes %}
 <div class="row">
-    <div class="col m12">
-        <ul class="collapsible popout">
-            <li>
-                <div class="collapsible-header"><i class="material-icons">local_drink</i><strong>{{recipe.recipe_name}}</strong></div>
-                <div class="collapsible-body"><span>{{recipe.recipe_description}} </span></div>
-                <div class="collapsible-body"><span>{{recipe.diffculity}}</span></div>
-            </li>
-            <li>
-
-                <div class="collapsible-header"><i class="material-icons">local_drink</i><strong>{{recipe.cocktail_name}}</strong></div>
-                <div class="collapsible-body"><span>By {{recipe.cocktail_author}} 
-                        {{recipe.cocktail_details}} </span></div>
-            </li>
-        </ul>
-    </div>
+    <ul class="collapsible popout">
+        <li>
+            <div class="collapsible-header">
+                <div class="col s9">
+                    <i class="material-icons">local_drink</i>
+                    <strong>{{recipe.recipe_name}}</strong>
+                </div>
+                <div class="col s3">
+                    <a class="waves-effect waves-light btn btn_small blue"><i class="material-icons left">pageview</i>View</a>
+                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red"><i class="material-icons left">edit_attributes</i>Edit</a>
+                </div>
+            </div>
+            <div class="collapsible-body"><span>{{recipe.recipe_description}} </span></div>
+            <div class="collapsible-body"><span>{{recipe.diffculity}}</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">local_drink</i><strong>{{recipe.cocktail_name}}</strong></div>
+            <div class="collapsible-body"><span>By {{recipe.cocktail_author}} {{recipe.cocktail_details}} </span></div>
+        </li>
+    </ul>
 </div>
 {% endfor %} {% endblock %}
