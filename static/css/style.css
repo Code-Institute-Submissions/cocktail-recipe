@@ -5,3 +5,9 @@
 .task_header{
     margin-top: 5px;
 }
+
+.parallax-container{
+    background-attachment: fixed;
+    background-image: url('images/cocktails-948353_1920.jpg');
+    min-height: 100%;
+}

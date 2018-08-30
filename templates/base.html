@@ -21,11 +21,11 @@
     </header>
     <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Create Cocktail</a>
     <div class="parallax-container">
-        <div class="parallax"><img src="images/glasses-1477081_1920.jpgjpg"></div>
+        <div class="parallax"><img src="static/images/the-bottle-427953_1920.jpg"></div>
     </div>
     {% block content %} {% endblock %}
     <div class="parallax-container">
-        <div class="parallax"><img src="images/cocktails-948353_1920.jpg"></div>
+        <div class="parallax"><img src="static/images/cocktails-948353_1920.jpg"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -35,9 +35,9 @@
             $('.parallax').parallax();
             $('select').material_select();
             $('#textarea1').val('New Text');
-            M.textareaAutoResize($('#textarea1'));
+            
             $('input#input_text, textarea#textarea2').characterCounter();
-            $('.sidenav').sidenav();
+            
         });
     </script>
 </body>
