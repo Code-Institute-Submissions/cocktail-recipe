@@ -26,15 +26,35 @@
                     <select id="difficulty" name="diffculty_level">
                     <option value="" disabled selected>Choose your option</option>
                     {% if recipes.diffculty_level == "Easy" %}
-                        <option value="1">Easy</option>
+                        <option value="Easy">Easy</option>
                     {% elif recipes.diffculty_level == "Hard" %}
-                        <option value="2">Hard</option>
+                        <option value="Hard">Hard</option>
                     {% elif recipes.diffculty_level == "Advanced" %}
-                        <option value="3">Advanced</option>
+                        <option value="Advanced">Advanced</option>
                     {% else %}
                     {% endif %}    
                     </select>
                     <label>Diffculty</label>
+                    </div>
+            <div class="input-field col s6">
+                <select multiple id="spirt_type" name="spirt_type">
+                  <option value="" disabled selected>Choose your poison</option>
+                  <option value="1">Vodka</option>
+                  <option value="2">Rum</option>
+                  <option value="3">Gin</option>
+                  <option value="3">Tequila</option>
+                  <option value="3">Whisky</option>
+                  <option value="3">Liqueur</option>
+                </select>
+                <label>Poison</label>
+            </div>
+            <div class="switch">
+                <label>
+                <input id="is_allergy" name="is_allergy" type="checkbox">
+                <span class="lever"></span>
+                  Allergy
+                </label>
+            </div>
                 </div>
             </div>
             <div class="row">

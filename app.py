@@ -41,11 +41,13 @@ def update_recipes(recipe_id):
         'cocktail_name': request.form.get['cocktail_name'],
         'cocktail_author': request.form.get['cocktail_author'],
         'cocktail_details': request.form.get['cocktail_details'],
-        'diffculty_level': request.form.get['diffculty_level']
+        'diffculty_level': request.form.get['diffculty_level'],
+        'is_allergy': request.form.get['is_allergy'],
+        'spirt_type': request.form.get['spirt_type']
     })
     return redirect(url_for('get_recipes'))
 
-@app.route('/delete_recipe/<recipe_id>')
+@app.route('/delete_recipes/<recipe_id>')
 def delete_recipes(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
