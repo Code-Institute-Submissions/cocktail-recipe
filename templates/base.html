@@ -11,18 +11,18 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo">Cocktails</a>
+                <a href="{{url_for('get_recipes')}}" class="brand-logo center">Cocktails</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_recipes')}}">Home</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
+                    <li><a href="{{url_for('my_chart')}}">Charts</a></li>
                 </ul>
             </div>
         </nav>
+    
     </header>
-    <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Create Cocktail</a>
-    <a href="{{url_for('my_chart')}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Chart</a>
     <div class="parallax-container">
-        <div class="parallax"><img src="static/images/the-bottle-427953_1920.jpg"></div>
+        <div class="parallax"><img src="{{url_for('static', filename='images/the-bottle-427953_1920.jpg')}}"></div>
     </div>
     <div class="container">
     {% block content %} {% endblock %}
@@ -38,7 +38,6 @@
             $('.parallax').parallax();
             $('select').material_select();
             $('#textarea1').val('New Text');
-            
             $('input#input_text, textarea#textarea2').characterCounter();
             
         });

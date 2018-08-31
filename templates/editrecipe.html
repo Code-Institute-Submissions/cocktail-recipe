@@ -3,7 +3,7 @@
 <h3>Edit Recipe</h3>
 
 <div class="row">
-    <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+    <form action="{{ url_for('update_recipes', recipe_id=recipes._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
@@ -41,12 +41,12 @@
             <div class="input-field col s6">
                 <select multiple id="spirt_type" name="spirt_type">
                   <option value="" disabled selected>Choose your poison</option>
-                  <option value="Vodka">Vodka</option>
-                  <option value="Rum">Rum</option>
-                  <option value="Gin">Gin</option>
-                  <option value="Tequila">Tequila</option>
-                  <option value="Whisky">Whisky</option>
-                  <option value="Liqueur">Liqueur</option>
+                  <option {% if 'Vodka' in recipes.spirt_type %}selected{%endif%} value="Vodka">Vodka</option>
+                  <option {% if 'Rum' in recipes.spirt_type %}selected{%endif%} value="Rum">Rum</option>
+                  <option {% if 'Gin' in recipes.spirt_type %}selected{%endif%} value="Gin">Gin</option>
+                  <option {% if 'Tequila' in recipes.spirt_type %}selected{%endif%} value="Tequila">Tequila</option>
+                  <option {% if 'Whisky' in recipes.spirt_type %}selected{%endif%} value="Whisky">Whisky</option>
+                  <option {% if 'Liqueur' in recipes.spirt_type %}selected{%endif%} value="Liqueur">Liqueur</option>
                 </select>
                 <label>Poison</label>
             </div>

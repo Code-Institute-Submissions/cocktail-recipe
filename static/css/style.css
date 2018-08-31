@@ -11,3 +11,7 @@
     background-image: url('images/cocktails-948353_1920.jpg');
     min-height: 100%;
 }
+
+.nav-wrapper{
+    background-color: #000000; 
+}
