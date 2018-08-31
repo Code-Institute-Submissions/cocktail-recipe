@@ -43,7 +43,7 @@ def update_recipes(recipe_id):
         'cocktail_details': request.form.get['cocktail_details'],
         'diffculty_level': request.form.get['diffculty_level'],
         'is_allergy': request.form.get['is_allergy'],
-        'spirt_type': request.form.get['spirt_type']
+        'spirt_type': request.form.getlist['spirt_type']
     })
     return redirect(url_for('get_recipes'))
 
@@ -51,6 +51,10 @@ def update_recipes(recipe_id):
 def delete_recipes(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+
+@app.route('/my_chart')
+def my_chart():
+    return render_template('chart.html')
 
 
 if __name__ == '__main__':
