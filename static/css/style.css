@@ -15,3 +15,9 @@
 .nav-wrapper{
     background-color: #000000; 
 }
+
+.cocktail{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 80px;
+}
