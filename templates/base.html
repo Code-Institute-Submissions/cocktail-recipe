@@ -12,27 +12,28 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="{{url_for('get_recipes')}}" class="brand-logo center">Cocktails</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
-                    <li><a href="{{url_for('my_chart')}}">Chart</a></li>
-                </ul>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="side-nav" id="mobile-demo">
+                <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
                     <li><a href="{{url_for('get_recipes')}}">Home</a></li>
                     <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
                     <li><a href="{{url_for('my_chart')}}">Chart</a></li>
                 </ul>
             </div>
-        </nav>
-
+       </nav> 
+        
+            <ul class="sidenav" id="mobile-demo">
+                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
+                    <li><a href="{{url_for('my_chart')}}">Chart</a></li>
+            </ul>
+            
     </header>
     <div class="parallax-container">
         <div class="parallax"><img src="{{url_for('static', filename='images/drinks-2561091_1920.jpg')}}"></div>
         <div class="row">
             <div class="col s12 cocktail">
                 <h3 class="white-text">Cocktail Creation</h3>
-                <div class="white-text">Create your favoutie cocktails and have stored here</div>
+                <div class="white-text">Create your favorite cocktails and have stored here</div>
                 <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn"><i class="material-icons left">local_drink</i>Create</a>
             </div>
         </div>
@@ -48,7 +49,7 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Cocktail Shortlist</h5>
-                    <p class="grey-text text-lighten-4">Helping to create the best cocktail list there is. Please drink responsbily</p>
+                    <p class="grey-text text-lighten-4">Helping to create the best cocktail list there is. Please drink responsibly</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
@@ -66,18 +67,22 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
     <script type="text/javascript">
         $(document).ready(function() {
-            
-            $('.button-collapse').sideNav();
-            $('.collapsible.popout').collapsible();
             $('.parallax').parallax();
+            $('.collapsible.popout').collapsible();
             $('select').material_select();
             $('#textarea1').val('New Text');
             $('input#input_text, textarea#textarea2').characterCounter();
-
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
         });
     </script>
 </body>
