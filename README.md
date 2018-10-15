@@ -8,6 +8,8 @@ and it yummy yum or what ever pleases them.
 
 # UX
 
+https://cocktail-recipes-flask.herokuapp.com/ 
+
 As the user loads up the page they will see a call to action that will lead them add a recipe page. 
 Once they have click add cocktail they brought back to the home page were they can see there new cocktail recipe.
 This list does a nice popout from the main page, it will show the name, author and details. 
@@ -21,16 +23,16 @@ The cocktail recipes that have been entered and the diffculty level of the cocta
 https://uk.thebar.com/cocktail-recipes 
 
 # Features 
-The features on this page are as follows. 
-    creating a recipe
-        A diffculty level
-        Allergic to stawberries
-        Multple selection of spirts that can be added rather than one. 
-    seeing a detailed list of recipes
-    The ability to edit and delete recipes
-    A pie chart that shows the most used spirts in the lists that have been created. 
+ 
+* Creating a recipe
+* A diffculty level
+* Allergic to stawberries
+* Multple selection of spirts that can be added rather than one. 
+* Seeing a detailed list of recipes
+* The ability to edit and delete recipes
+* A pie chart that shows the most used spirts in the lists that have been created. 
 
-# Features that could be implemented in the future.
+### Features that could be implemented in the future.
     I would have liked to add some recipes that the user could use as a starting point and 
     remove anything they wished.
 
@@ -95,12 +97,18 @@ Once all functions were in place and working I set to getting the page to look m
 I adding a simple card under the list so the user could find the pie chart easily.
 Adding the tool bar and burger so when the page when reduce down it would work on mobile 
 
+# Deployment
+
+There are no differences between the deployed version and the development version. 
+
 # Credits 
 
+## Media
 Images taken from 
-https://pixabay.com/en/editors_choice/
+* https://pixabay.com/en/editors_choice/
 
-I recieved inspiration from 
+## Acknowledgements
+* I recieved inspiration from 
 Jim Richmond 
 Niel 
 Gabriela 
