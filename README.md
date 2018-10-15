@@ -109,6 +109,4 @@ Images taken from
 
 ## Acknowledgements
 * I recieved inspiration from 
-Jim Richmond 
-Niel 
-Gabriela 
+Jim Richmond, Niel and Gabriela 
