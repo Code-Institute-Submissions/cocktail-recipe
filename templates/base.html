@@ -9,24 +9,22 @@
 
 <body>
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo center">Cocktails</a>
-                <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
-                    <li><a href="{{url_for('my_chart')}}">Chart</a></li>
-                </ul>
-            </div>
-       </nav> 
-        
-            <ul class="sidenav" id="mobile-demo">
-                    <li><a href="{{url_for('get_recipes')}}">Home</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
-                    <li><a href="{{url_for('my_chart')}}">Chart</a></li>
-            </ul>
-            
+       <nav>
+           <div class="nav-wrapper">
+               <a href="#!" class="brand-logo">Logo</a>
+               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+               <ul class="right hide-on-med-and-down">
+                   <li><a href="{{url_for('get_recipes')}}">Home</a></li>
+                   <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
+                   <li><a href="{{url_for('my_chart')}}">Chart</a></li>
+               </ul>
+               <ul class="side-nav" id="mobile-demo">
+                   <li><a href="{{url_for('get_recipes')}}">Home</a></li>
+                   <li><a href="{{url_for('add_recipe')}}">Create a Cocktail</a></li>
+                   <li><a href="{{url_for('my_chart')}}">Chart</a></li>
+               </ul>
+           </div>
+       </nav>
     </header>
     <div class="parallax-container">
         <div class="parallax"><img src="{{url_for('static', filename='images/drinks-2561091_1920.jpg')}}"></div>
@@ -71,6 +69,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     
+    
     <script type="text/javascript">
         $(document).ready(function() {
             $('.parallax').parallax();
@@ -78,11 +77,7 @@
             $('select').material_select();
             $('#textarea1').val('New Text');
             $('input#input_text, textarea#textarea2').characterCounter();
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
+            $(".button-collapse").sideNav();
         });
     </script>
 </body>
